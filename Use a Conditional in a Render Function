@@ -1,0 +1,23 @@
+var React from 'react';
+var ReactDOM from 'react-dom';
+
+var fiftyFifty = Math.random() < 0.5;
+
+// React.createClass call begins here:
+var TonightsPlan = React.createClass({
+render(){
+
+var task;
+if(fiftyFifty === false) {
+  task = "out" 
+}else{
+  task = "to bed"
+}
+return <h1>Tonight I'm going {task} WOOO</h1>;
+}
+});
+
+ReactDOM.render(
+<TonightsPlan />,
+document.getElementById('app')
+);
